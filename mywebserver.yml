@@ -20,7 +20,10 @@
       name: httpd
       state: present
 
+    when: ansible_os_family =="RedHat"
   - name: i want to start webserver on amazon node
     service:
       name: httpd
       state: started    
+    when: ansible_os_family =="RedHat"
+    

@@ -13,4 +13,13 @@
       state: started
 
       when: ansible_os_family =="Debian"
-      
+
+  - name: i want to install webserver on amazon node
+    yum:
+      name: httpd
+      state: present
+
+  - name: i want to start webserver on amazon node
+    service:
+      name: httpd
+      state: started    

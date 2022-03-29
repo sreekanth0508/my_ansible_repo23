@@ -1,0 +1,25 @@
+---
+- hosts: all
+  become: yes
+  tasks: 
+  - name: i want to install tree on ubuntu node
+    apt: 
+      name: tree
+      state: present
+
+  - name: i want to start tree  
+    service: 
+      name: tree
+      state: present
+
+  - name: i want to install wget on ubuntu node
+    apt:  
+      name: wget
+      state: present
+
+  - name: i want to start wget
+    service: 
+      name: wget
+      state: present    
+
+             

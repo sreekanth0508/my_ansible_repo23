@@ -10,5 +10,16 @@
     debug:
       msg: "{{myResult}}"
 
+  - name: install git
+    apt:
+     name: git
+     state: present
+    when: myResult.stderr =="" 
+
+  - name: install tree
+    apt:
+     name: tree
+     state: present
+    when: myResult.stderr !=""
   
   

@@ -27,5 +27,15 @@
       name: "{{mywebpackegeforRedHat}}"
       state: started   
 
-    when: ansible_os_family =="RedHat"      
+    when: ansible_os_family =="RedHat"   
 
+  - name: i want to install Java onubuntu node
+    apt:
+      name: "{{myjavapackageforubuntu}}"  
+      state: present
+
+  - name: i want to install java on RedHat node
+    yum:
+      name: "{{myjavapackageforRedHat}}"
+      state: present 
+      

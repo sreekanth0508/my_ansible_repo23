@@ -4,12 +4,14 @@
   tasks: 
   - name: i want to install tree on ubuntu node
     apt: 
-      name: tree
+      name: "{{mytreepackageforubuntu}}"
       state: present
+    when: ansible_os_family== "Debian"
 
   - name: i want to install wget on ubuntu node
     apt:  
-      name: wget
+      name: "{{mywgetpackageforubuntu}}"
       state: present
-
+    when: ansible_os_family== "Debian"
+    
         

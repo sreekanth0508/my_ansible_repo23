@@ -9,7 +9,7 @@
 
 
 - name: i want to copy my data into node
-  templates: 
+  template: 
       src: templates/myindex.j2
       dest: /var/www/html/myindex.html
   notify: restarted

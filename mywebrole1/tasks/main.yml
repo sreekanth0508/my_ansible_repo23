@@ -1,2 +1,18 @@
 ---
 # tasks file for mywebrole1
+
+- name: install webserver
+  apt: 
+    name: apache2
+    state: present
+  notify: restarted
+
+
+- name: i want to copy my data into node
+  templates: 
+      src: templates/myindex.j2
+      dest: /var/www/html/myindex.html
+  notify: restarted
+  
+
+   

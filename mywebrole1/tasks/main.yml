@@ -5,14 +5,14 @@
   apt: 
     name: apache2
     state: present
-  notify: restarted
+  notify: restartwebserver
 
 
 - name: i want to copy my data into node
   template: 
       src: templates/myindex.j2
       dest: /var/www/html/myindex.html
-  notify: restarted
+  notify: restartwebserver
   
 
    
